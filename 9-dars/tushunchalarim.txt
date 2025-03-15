@@ -1,0 +1,22 @@
+type a = string | number ---> bu turdagi typelar union type turiga kiradi.  a nomli type ni o'zi 2 xil typeda ishlaydi
+type b = "hello" | 100 ---> bu esa literal type deyiladi. 
+const array : b[] = [] ni yozib array ichida Ctrl+space ni bossak shu yuqoridagi 3 xil qiymatni chiqarib beradi
+nozik jihatlari : true false ni ishlarib bo'lmaydi. qiymatini obyekt qilib belgilasak ham ctrl+space ni bossak chiqarib bermaydi
+
+
+interface Iuser {               Bu interface ---> obyek uchun sxema yaratib berishga xizmat qildi strukturali ishlaydi 
+  username: string              is_phone_verified?: boolean; qolipda '?'  ishlatilsa. bu maydonga qiymat berishni majburiy emas
+  password: string;
+  is_email_verified: boolean;   2 ta bir xil nomli interface yaratdam ikovi birlashib ishlaydi
+  age: number;
+}
+
+interface Igeneric<T> {          generic type lyuboy taypni qabul qiladi
+  title: T;
+}                                
+
+const genericType: Igeneric<string> = {         shu qatorida typeni berib ketish kerak
+  title: "otti beli",
+};
+
+console.log(genericType);
